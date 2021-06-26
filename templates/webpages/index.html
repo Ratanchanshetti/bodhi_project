@@ -1,0 +1,356 @@
+{% extends 'layout/weblayout.html' %} 
+{% load static %} 
+
+<title>{% block title %} 
+{{title}}
+{% endblock %} </title>
+
+{% block content %} 
+
+<!--Carousel Section Start -->
+  
+<div class="home-slider owl-carousel js-fullheight">
+{% for x in carousel %}
+  <div class="slider-item js-fullheight" style="background-image:url('{{x.img.url}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate">
+          <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100" >
+            <!-- <h2 style=" font-size: 250%;color:whitesmoke"><b>Vocational Training &amp;Internship</b></h2> -->
+            <div class="direction">
+            <h2 style=" font-size: 250%;color:whitesmoke;">{{x.heading}}</b></h2>
+            <h3>{{x.description}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+<!--
+
+  <div class="slider-item js-fullheight" style="background-image:url({% static 'assets/imag/slider_img/mobile3.jpg' %});">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate">
+          <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="direction">
+            <h2 style=" font-size: 250%;color:whitesmoke;"> Mobile Application Development</b></h2>
+            <h3>Every year more and more people rely on mobile devices to meet their needs. Where websites used to be the gold-standard,
+              people now rely on mobile apps. so it’s an exciting time to start learning Mobile Development!</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slider-item js-fullheight" style="background-image:url({% static 'assets/imag/slider_img/iot3.jpg' %});">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate">
+          <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="direction">
+            <h2 style=" font-size: 250%;color:whitesmoke"> IOT Application Development</b></h2>
+            <h3> In today’s world, there is a lot of buzz for the trending technology IoT (Internet of things).
+               As the world is relying more on the internet which helps people to communicate across the globe.
+              The IoT is that technology that is responsible to connect different devices and collected data</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slider-item js-fullheight" style="background-image:url({% static 'assets/imag/slider_img/course-3.jpg' %});">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate">
+          <div class="text w-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="direction">
+            <h2 style=" font-size: 250%;color:whitesmoke"> Bodhi Academy</b></h2>
+            <h3> An Authentic and Promising Training and Internship provider.We are India’s one of the leading solution providers in Information Technology Training, Staffing and Products & Tools Consulting services to both Retail and Corporate customers</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->
+</div>
+
+<!--Carousel Section End -->
+
+
+
+
+<br>
+ <main id="main">
+ <!-- start service Section -->
+ <div class="container">
+  <div class="row">
+    <h1  style="text-align: center; color: #00ca54;font-size: 200%; font-family:' Poppins;'"><b>{{p}}</b></h1>
+    {% for y in fun %}   
+    <div class="col-md-4 col-sm-6">
+          <div class="serviceBox green">
+               <img src='{{y.gif.url}}' alt="">
+              
+              <h3 class="title">{{y.Title}}</h3>
+              <p class="description">
+                {{y.content}}
+              </p>
+            
+          </div>
+      </div>
+
+      {% endfor %}
+      <!--
+      <div class="col-md-4 col-sm-6">
+          <div class="serviceBox green">
+            <img src="{% static 'assets/imag/icons/customer-satisfaction.gif' %}" alt="">
+            
+              <h3 class="title">CUSTOMER SATISFACTION</h3>
+              <p class="description">
+                Developing smooth, reliable, scalable and robust apps within the specified time frame, 
+                ensuring 100% customer satisfaction, provide smart solutions for growth your Business.
+              </p>
+          </div>
+      </div>
+ 
+      <div class="col-md-4 col-sm-6">
+        <div class="serviceBox green">
+            <img src="{% static 'assets/imag/icons/icons8-hourglass.gif' %}" alt="">
+            <br>
+            <br>
+            <br>
+            <h3 class="title">MINIMAL DEVELOPMENT TIME</h3>
+            <p class="description">
+              Our skilled developers and designers have the proficiency to build mobile applications & 
+              websites in minimal time, ensuring complete testing of applications.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox green">
+          <img src="{% static 'assets/imag/icons/icons8-design.gif' %}" alt="">
+          <h3 class="title">PERFECT DESIGN</h3>
+          <p class="description">
+            We are use a Service Design model, where our research efforts consider the holistic experience,
+            not just a product or a singular solution. 
+            This helps to ensure that every facet of an experience is optimized to best serve the customer.
+            
+          </p>
+      </div>
+  </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox green">
+          <img src="{% static 'assets/imag/icons/check.gif' %}" alt="">
+          
+          <h3 class="title">CLEAN CODE</h3>
+          <p class="description">
+            By applying universal rules of software architecture, we can dramatically improve developer productivity
+             throughout the life of any software system. Our products code is simple, 
+            understandable that is efficient, reasonably free of bugs and maintainable.
+          </p>
+      </div>
+  </div>
+
+
+  
+
+
+
+<div class="col-md-4 col-sm-6">
+  <div class="serviceBox green">
+      <img src={{func.gif.url}} alt="">
+      <h3 class="title">{{func.Title}}</h3>
+      <p class="description">
+        {{func.content}}
+      </p>
+  </div>
+</div>
+ -->
+  </div>
+ 
+</div>
+
+
+  <!-- end service Section -->
+
+
+<!-- start_clients -->
+<section>
+   
+<div class="container">
+    <div class="row">
+        <div class="form-horizontal"> <h1 class="text-center pt-5 pb-5" style="color: #5fcf80;" > <b>{{c.c_title}}</b> </h1> 
+          <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+
+          <div class="container">
+              <div class="row">
+                 {% for z in cleint %}
+                <div class="col-md-3 col-sm-6">
+                  <a href="https://www.gmceh.co.in" target="blank">
+                  <div class="counter">
+                    <div class="counter-content">
+
+                      <img src={{c.c_img.url}} alt="">
+
+                    </div>
+                  </div>  </a>
+              </div>
+             {% endfor %}
+             <!--
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://infominds-e0eda.web.app" target="blank">
+                <div class="counter purple">
+                  <div class="counter-content">
+
+                    <img src="{% static 'assets/imag/clients/infominds.png' %}" alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://www.loksevavidyamandir.in" target="blank">
+                <div class="counter yellow">
+                  <div class="counter-content">
+                    <img src="{% static 'assets/imag/clients/lokseva.png' %}" alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <a href="https://ssagrofoodind.web.app" target="blank">
+                <div class="counter blue">
+                  <div class="counter-content">
+                    <img src="{% static 'assets/imag/clients/ssagro.png' %}" alt="">
+                    
+                  </div>
+                </div>  </a>
+              </div>
+
+      <!-- 2nd_start -->
+
+
+              <div class="col-md-3 col-sm-6">
+                <a href="https://www.gmceh.co.in" target="blank">
+                <div class="counter">
+                  <div class="counter-content">
+
+                    <img src="{% static 'assets/imag/clients/godavari.png' %}" alt="">
+
+                  </div>
+                </div>  </a>
+            </div>
+           
+            <div class="col-md-3 col-sm-6">
+                <a href="https://infominds-e0eda.web.app" target="blank">
+              <div class="counter purple">
+                <div class="counter-content">
+
+                  <img src="{% static 'assets/imag/clients/infominds.png' %}" alt="">
+                  
+                </div>
+              </div>  </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <a href="https://www.loksevavidyamandir.in" target="blank">
+              <div class="counter yellow">
+                <div class="counter-content">
+                  <img src="{% static 'assets/imag/clients/lokseva.png' %}" alt="">
+                  
+                </div>
+              </div>  </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <a href="https://ssagrofoodind.web.app" target="blank">
+              <div class="counter blue">
+                <div class="counter-content">
+                  <img src="{% static 'assets/imag/clients/ssagro.png' %}" alt="">
+                  
+                </div>
+              </div>  </a>
+            </div>
+
+
+            
+
+
+            </div>
+          </div>
+          </div>
+      </div>
+  </div>
+
+
+
+</section>
+
+<!-- end_clients -->
+
+
+
+
+<!--======= About Section ======= -->
+<section id="about" class="about">
+  {% for obj in about %}
+<div class="container" data-aos="fade-up">
+ 
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+      <img src={{obj.A_img.url}} class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+      <h2 style="color:#00ca54"><b>{{obj.A_title}}</b></h2>
+      <p >
+       
+        <p>
+       
+      </p>
+      </p>
+      <ul>
+        <li><i class="bi bi-check-circle"></i>{{obj.A_description}}</li>
+        <li><i class="bi bi-check-circle"></i>{{obj.Aa_description}}</li>
+         <li><i class="bi bi-check-circle"></i>{{obj.Ab_description}}</li>
+       
+      </ul>
+      
+
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+</section>
+<!-- End About Section -->
+
+<!-- clients-->
+
+
+
+<!-- end clients-->
+
+</main><!-- End #main -->
+<br>
+
+
+
+{% endblock %} 
